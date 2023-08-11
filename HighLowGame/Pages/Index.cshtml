@@ -1,0 +1,43 @@
+﻿@page
+@using HighLowGameMaster;
+
+<link href="~/css/game.css" rel="stylesheet" />
+
+<div class="container">
+    <div>
+        <h3>Welcome to the Hi-Lo game</h3>
+        <p>
+            Each player connected to this URL can guess the Mystery Number.
+            The game will let you know if you guess is higher, lower or the exact the Mystery Number.
+        </p>
+        <p>Your messages are displayed in <span style="color: green">green</span>, other players messages are <span style="color: red">red</span> and system messages are <span style="color: gray">gray</span>.</p>
+    </div>
+    <hr />
+    <div class="row p-1">
+        <div class="col-1">User</div>
+        <div class="col-5"><input type="text" id="userInput" /></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-1">Guess</div>
+        <div class="col-5"><input type="text" id="messageInput"/></div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6 text-end">
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <hr />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div id="messagesList" class="col-6" />
+    </div>
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/party/party.min.js"></script>
+<script src="~/js/name.js"></script>
+<script src="~/js/index.js"></script>
+<script src="~/js/game.js"></script>
